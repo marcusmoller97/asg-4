@@ -118,8 +118,10 @@ a {
 /* Knapp med rosa kant, mörkröd bakgrund och roterad */
 .input-container .button {
   background-color: darkred;
+  color: #ffffff;
   font-size: 1.2rem;
   padding: 1.2rem;
+  cursor: pointer;
 }
 
 .button:hover {
