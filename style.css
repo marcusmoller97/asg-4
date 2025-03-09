@@ -3,81 +3,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; /* Tungläst typsnitt */
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */ /* Tungläst typsnitt */
+  font-family: "Roboto", sans-serif;
 }
+
+html {
+  font-size: 100%;
+}
+
 
 /* Ställer in bakgrundsfärg, textfärg och textstil för hela sidan */
 body {
   background: #6c6c6c;
   color: #f5f5dc;
-  font-size: 30px;
-  text-align: left;
+  line-height: 1.4;
+  /* font-size: 30px; */ /* detta skriver över standard fontsize, det vill vi inte. */
+  /* text-align: left; */
   letter-spacing: 5px;
-  word-spacing: 15px;
-  line-height: 1.2em;
+  /* word-spacing: 15px; */
+  /* line-height: 1.2em; */
   text-shadow: 5px 5px 10px black;
 }
 
-/* Tar bort understrykning på länkar och ändrar färg */
-a {
-  color: #f5f5dc;
-  text-decoration: none;
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 3.5rem;
 }
 
-/* Stilar för en knapp-liknande div, men "not-allowed" cursor gör att den ser inaktiv ut */
-.button {
-  background-color: magenta;
-  color: cyan;
-  font-size: 50px;
-  padding: 20px;
-  border: 5px dashed black;
-  cursor: not-allowed;
-  text-transform: uppercase;
+h2 {
+  font-size: 2em;
+  margin-bottom: 2.5rem;
 }
 
-/* Nästan osynlig text, spegelvänd */
-.hidden-text {
-  display: block;
-  opacity: 0.1;
-  font-size: 50px;
-  transform: rotate(180deg);
+p {
+  font-size: 1.25em;
+  margin-bottom: 1.75rem;
 }
 
-/* En behållare med mittjusterad text och en blå transparent bakgrund */
-.container {
+header {
+  background-color: #3b3b3b;;
   width: 100%;
-  margin: auto;
-  border: 10px solid pink;
-  background-color: rgba(0, 0, 255, 0.2);
-  text-align: center;
-}
-
-/* Artikel med prickad orange linje och en radial gradient som bakgrund */
-.article {
-  border-bottom: 10px dotted orange;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-  background: radial-gradient(circle, black, transparent);
-}
-
-/* Rubrik med stor text och mörkröd färg, justerad till höger */
-.headline {
-  font-size: 80px;
-  font-weight: lighter;
-  color: #8d0801;
-  text-align: right;
-  margin: 50px;
-  padding: 20px;
+  max-height: 300px;
 }
 
 /* Navigeringsmeny med mörk bakgrund och jämnt fördelade element */
 .navigation {
   background-color: #3b3b3b;
   padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
+}
+
+.navigation ul .nav-item {
+  list-style-type: none;
+  display: inline-block;
 }
 
 /* Navigeringslänkar */
@@ -90,6 +69,101 @@ a {
 /* Bakgrundsfärg vid hover på navigationslänkar */
 .navigation .nav-item:hover a {
   background-color: #acacac40;
+}
+
+.two-col {
+  display: flex;
+  align-items: center;
+
+  /* padding: 2rem; */
+  height: 100px;
+
+}
+
+/* Input-fält i en container med kolumnlayout och flytande positionering */
+.input-container {
+  display: flex;
+  /* align-items: center; */
+  /* width: 60%; */
+  height: 100px;
+
+  background: #ffffff00; /* Genomskinlig bakgrund */
+}
+
+.two-col h1 {
+  width: 40%;
+  margin-bottom: 0;
+  align-self: center;
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+.input-container {
+  /* width: 60%; */
+  align-items: center;
+  align-self: flex-end;
+  /* float: left; */
+  /* float: right; */
+  margin-left: auto;
+  padding-right: 2rem;
+}
+
+/* Inputfält med röd text och svart ram */
+.input-container input {
+  font-size: 1.2em;
+  padding: 1.2rem;
+}
+
+/* Tar bort understrykning på länkar och ändrar färg */
+a {
+  color: #f5f5dc;
+  text-decoration: none;
+}
+
+
+/* Knapp med rosa kant, mörkröd bakgrund och roterad */
+.input-container button {
+  /* border: 10px ridge pink; */
+  background-color: darkred;
+  /* color: white; */
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  /* cursor: crosshair; */
+  /* transform: rotate(-10deg); */
+}
+
+/* En knapp med blå bakgrund och vit text */
+/* .button {
+  display: inline-block;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+} */
+ 
+/* Nästan osynlig text, spegelvänd */
+/* .hidden-text {
+  display: block;
+  opacity: 0.1;
+  font-size: 50px;
+  transform: rotate(180deg);
+} */
+
+/* En behållare med mittjusterad text och en blå transparent bakgrund */
+.container {
+  width: 100%;
+  margin: auto;
+  /* border: 10px solid pink; */
+  background-color: rgba(0, 0, 255, 0.2);
+  text-align: center;
+}
+
+/* Artikel med prickad orange linje och en radial gradient som bakgrund */
+.article {
+  border-bottom: 10px dotted orange;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background: radial-gradient(circle, black, transparent);
 }
 
 /* Bilderna placeras i en rad, centrerar dem horisontellt och vertikalt och lägger till ett mellanrum mellan bilderna */
@@ -107,47 +181,11 @@ a {
   object-fit: cover;
 }
 
-/* Input-fält i en container med kolumnlayout och flytande positionering */
-.input-container {
-  display: flex;
-  flex-direction: column;
-  float: right;
-  width: 50%;
-  background: #ffffff00; /* Genomskinlig bakgrund */
-}
 
-/* Inputfält med röd text och svart ram */
-.input-container input {
-  font-size: 30px;
-  padding: 20px;
-  text-align: right;
-  border: 5px solid black;
-  background-color: rgb(255, 255, 255);
-  color: red;
-}
 
-/* Knapp med rosa kant, mörkröd bakgrund och roterad */
-.input-container button {
-  border: 10px ridge pink;
-  background-color: darkred;
-  color: white;
-  font-size: 40px;
-  padding: 30px;
-  cursor: crosshair;
-  transform: rotate(-10deg);
-}
-
-/* En knapp med blå bakgrund och vit text */
-.button {
-  display: inline-block;
-  padding: 10px;
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-}
 
 /* En "fake ad" med blinkande bakgrund och fast position längst ner */
-#fake-ad {
+/* #fake-ad {
   position: fixed;
   bottom: 0;
   width: 40%;
@@ -161,7 +199,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-}
+} */
 
 /* Sektion med centrerad layout */
 .top-section {
@@ -196,11 +234,11 @@ a {
 }
 
 /* Nyckelbildning för att rotera bilden åt vänster och höger */
-@keyframes rotateLeftRight {
+/* @keyframes rotateLeftRight {
   0% {
     transform: rotate(-45deg);
   }
   100% {
     transform: rotate(45deg);
   }
-}
+} */
